@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLBC</title>
+
+
+    <link rel="stylesheet" href="../style/styles.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav_container">
+            <a href="../index.html" class="nav_logo">DLBC</a>
+
+            <ul class="nav_items">
+
+                <!-- <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li> -->
+
+                <!-- <li><a href="./login/sign.html">Signin</a></li> -->
+
+                <li class="nav_profile">
+                    <div class="avatar">
+                        <img src="../images/avatar1.jpg" alt="">
+                    </div>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="../logout.html">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <button id="open_nav-btn"><i class="uil uil-bars"></i></button>
+            <button id="close_nav-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+    <!-- end of nav  -->
+
+    <section class="dashboard">
+        <div class="container dashboard_container">
+            <button id="show_sidebar-btn" class="sidebar_toggle"><i class="uil uil-angle-right-b"></i></button>
+            <button id="hide_sidebar-btn" class="sidebar_toggle"><i class="uil uil-angle-left-b"></i></button>
+            <aside>
+                <ul>
+                    <li>
+                        <a href="locations.html"><i class="uil uil-pen"></i>
+                            <h5>Add Location</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="manage-locations.html"><i class="uil uil-postcard"></i>
+                            <h5>Manage Location</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="district.html"><i class="uil uil-pen"></i>
+                            <h5>Add District</h5>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="manage-district.html"><i class="uil uil-edit"></i>
+                            <h5>Manage Districts</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="sundayservice.html"><i class="uil uil-pen"></i>
+                            <h5>Sunday Service</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="manage-sundayservice.html" ><i class="uil uil-list-ul"></i>
+                            <h5>Manage Sunday Service</h5>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="homecaring.html"><i class="uil uil-pen"></i>
+                            <h5>House Fellowship</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="manage-homecaring.html"><i class="uil uil-list-ul"></i>
+                            <h5>Manage House Fellowship</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="biblestudies.html"><i class="uil uil-pen"></i>
+                            <h5>Monday Bible Study</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="manage-biblestudies.html"><i class="uil uil-list-ul"></i>
+                            <h5>Manage Bible Study</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="revivalservice.html"><i class="uil uil-pen"></i>
+                            <h5>Thurday Service</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="manage-revivalservice.html"  class="active"><i class="uil uil-list-ul"></i>
+                            <h5>Manage Thurday Service</h5>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="../membersreg.html"><i class="uil uil-user-plus"></i>
+                            <h5>Members Registration</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../allmembers.html"><i class="uil uil-user"></i>
+                            <h5>Members Profile</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../manage-allmembers.html"><i class="uil uil-list-ul"></i>
+                            <h5>Manage Members</h5>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="manage-users.html"><i class="uil uil-list-ul"></i>
+                            <h5>Manage Users</h5>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="report.html"><i class="uil uil-postcard"></i>
+                            <h5>Survice Reports</h5>
+                        </a>
+                    </li>
+
+                </ul>
+            </aside>
+
+
+
+            <div class="tabel-container">
+                <h1 class="heading">Manage Thurday Service Record</h1>
+
+                <table class="tablestyle">
+
+                    <!-- <colgroup>
+                        <col span="2">
+                        <col span="1" style="width: 9rem;">
+                    </colgroup> -->
+
+                    <!-- <caption class="capheading">grtyrtyr</caption> -->
+
+                    <thead>
+                        <tr>
+                            <th colspan="2">Adult</th>
+                            <th colspan="2">Youth</th>
+                            <th colspan="2">Children</th>
+                            <th colspan="2">Visiors</th>
+                            <th colspan="2">Offering</th>
+                            <th rowspan="2">Tithe</th>
+                            <th rowspan="2">Date</th>
+                            <th rowspan="2">Week</th>
+                            <th rowspan="2">S. Type</th>
+
+                            <th rowspan="2">Action </th>
+                        </tr>
+
+
+                        <tr>
+                            <!-- FOR ADULT -->
+                            <th>M</th>
+                            <th>F</th>
+
+                            <!-- FOR Youth -->
+                            <th>M</th>
+                            <th>F</th>
+
+                            <!-- FOR Children -->
+                            <th>M</th>
+                            <th>F</th>
+
+                            <!-- FOR Visiors -->
+                            <th>M</th>
+                            <th>F</th>
+
+                            <!-- FOR Offering -->
+                            <th>1st</th>
+                            <th>2nd</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+
+                        <tr>
+                            <td data-label="MA">12</td>
+                            <td data-label="FA">6</td>
+
+                            <td data-label="MY">12</td>
+                            <td data-label="FY">6</td>
+
+                            <td data-label="MC">12</td>
+                            <td data-label="FC">6</td>
+
+                            <td data-label="MV">12</td>
+                            <td data-label="FV">6</td>
+
+                            <td data-label="1st">Ghc 3</td>
+                            <td data-label="2nd">Ghc 6</td>
+
+                            <td data-label="Tithe">Ghc 2173</td>
+
+                            <td data-label="Date">18/01/2023</td>
+
+                            <td data-label="Week">1</td>
+                            
+                            <td data-label="Servie type">Monday</td>
+
+                            <td data-label="Action">
+                                <a href="edit-category.html" class="btn sm warning">Edit</a>
+                                <a href="delete-category.html" class="btn sm danger">Delete</a>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                          <td data-label="MA">12</td>
+                          <td data-label="FA">6</td>
+
+                          <td data-label="MY">12</td>
+                          <td data-label="FY">6</td>
+
+                          <td data-label="MC">12</td>
+                          <td data-label="FC">6</td>
+
+                          <td data-label="MV">12</td>
+                          <td data-label="FV">6</td>
+
+                          <td data-label="1st">Ghc 3</td>
+                          <td data-label="2nd">Ghc 6</td>
+
+                          <td data-label="Tithe">Ghc 2173</td>
+
+                          <td data-label="Date">18/01/2023</td>
+
+                          <td data-label="Week">1</td>
+                          
+                          <td data-label="Servie type">Monday</td>
+
+                          <td data-label="Action">
+                              <a href="edit-category.html" class="btn sm warning">Edit</a>
+                              <a href="delete-category.html" class="btn sm danger">Delete</a>
+                          </td>
+
+                      </tr>
+
+                      <tr>
+                        <td data-label="MA">12</td>
+                        <td data-label="FA">6</td>
+
+                        <td data-label="MY">12</td>
+                        <td data-label="FY">6</td>
+
+                        <td data-label="MC">12</td>
+                        <td data-label="FC">6</td>
+
+                        <td data-label="MV">12</td>
+                        <td data-label="FV">6</td>
+
+                        <td data-label="1st">Ghc 3</td>
+                        <td data-label="2nd">Ghc 6</td>
+
+                        <td data-label="Tithe">Ghc 2173</td>
+
+                        <td data-label="Date">18/01/2023</td>
+
+                        <td data-label="Week">1</td>
+                        
+                        <td data-label="Servie type">Monday</td>
+
+                        <td data-label="Action">
+                            <a href="edit-category.html" class="btn sm warning">Edit</a>
+                            <a href="delete-category.html" class="btn sm danger">Delete</a>
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <!-- for the copyright -->
+        <div class="footer_copyright">
+            <small>Copyright &copy; -2023 IKETECH</small>
+        </div>
+    </footer>
+
+
+    <script src="../style/main.js"></script>
+</body>
+
+</html>

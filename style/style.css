@@ -1,0 +1,811 @@
+/* General settings */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: o;
+    border: 0;
+    appearance: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* for the body */
+body {
+    min-height: 100vh;
+    background: #021931;
+    overflow-x: hidden;
+
+    /* background-image: url(../images/bg-texture.png); */
+}
+
+
+/* the container class for the entire div */
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    /* width: 100vw; */
+
+}
+
+.container .form {
+    margin-top: 6rem;
+    /* width: 25em; */
+    padding: 20px 25px;
+    border-radius: 20px;
+    border: 8px solid #021931;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+        inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 20px;
+}
+
+.container  .form.signin, .form.signup {
+    width: 25vw;
+    margin: 0 auto;
+}
+/* the form class for the entire form input */
+/* .container .form.reg { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+} */
+
+/* class in the javascript  */
+/* .container.signinForm  .form.signin,
+.container.signinForm .form.signup {
+    display: none;
+} */
+
+
+.container.signinForm .form.signin {
+    display: flex;
+}
+
+/* styling the h2 in the form class */
+.container .form h2 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* styling the inputBox in the form div containing the input */
+.container .form .inputBox {
+    position: relative;
+    width: 100%;
+}
+
+/* ................................ */
+.container .form .areaBox {
+    position: relative;
+    width: 100%;
+}
+
+
+/* styling the input in the form */
+.container .form .inputBox input {
+    /* padding: 12px 10px 10px 48px; */
+    padding: 12px 8px 8px 48px;
+    width: 100%;
+    border: none;
+    background: #021931;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-weight: 300;
+    /* border-radius: 25px; */
+    border-radius: 12.5px;
+    font-size: 0.8em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+    outline: none;
+}
+
+/* ..................................................... */
+.container .form .areaBox input,
+textarea {
+    /* padding: 12px 10px 10px 48px; */
+    padding: 12px 8px 8px 12px;
+    width: 100%;
+    border: none;
+    background: #021931;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-weight: 300;
+    /* border-radius: 25px; */
+    border-radius: 12.5px;
+    font-size: 0.8em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+    outline: none;
+}
+
+/* styling the span element in the form */
+.container .form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight: 100;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ........................................................... */
+.container .form .areaBox span {
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 12px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight: 100;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* getting the input value  */
+.container .form .inputBox input:valid~span,
+.container .form .inputBox input:focus~span {
+    color: #00dfc4;
+    border: 1px solid #00dfc4;
+    background: #021931;
+    transform: translateX(25px) translateY(-7px);
+    font-size: 0.6em;
+    padding: 0.8px 8px 0.8px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+}
+
+/* getting the input value  */
+.container .form .inputBox input:valid,
+.container .form .inputBox input:focus {
+    border: 1px solid #00dfc4;
+}
+
+/* ............................................................................. */
+/* getting the textarea value  */
+.container .form .areaBox textarea:valid~span,
+.container .form .areaBox textarea:focus~span {
+    color: #00dfc4;
+    border: 1px solid #00dfc4;
+    background: #021931;
+    transform: translateX(-1px) translateY(-7px);
+    font-size: 0.6em;
+    padding: 0.8px 8px 0.8px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+}
+
+/* getting the input value  */
+.container .form .areaBox textarea:valid,
+.container .form .areaBox textarea:focus {
+    border: 1px solid #00dfc4;
+}
+
+.container .form .areaBox input:valid~span,
+.container .form .areaBox input:focus~span {
+    color: #00dfc4;
+    border: 1px solid #00dfc4;
+    background: #021931;
+    transform: translateX(-1px) translateY(-7px);
+    font-size: 0.6em;
+    padding: 0.8px 8px 0.8px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+}
+
+/* getting the input value  */
+.container .form .areaBox input:valid,
+.container .form .areaBox input:focus {
+    border: 1px solid #00dfc4;
+}
+
+
+.container .form .inputBox i {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    padding: 2px 0;
+    padding-right: 8px;
+    color: #00dfc4;
+    border-right: 1px solid #00dfc4;
+}
+
+
+/* styling the inputBox in the form div containing the input */
+.container .form .SelBox {
+    position: relative;
+    width: 100%;
+}
+
+/* styling the dropdown box */
+.container .form .SelBox select {
+    /* padding: 0.6rem 1.2rem;  */
+    padding: 0.6rem 10px 0.6rem 48px;
+    width: 100%;
+    border: none;
+    background-color: #021931;
+    border-radius: 12.5px;
+    font-size: 0.8em;
+    color: #fff;
+    font-weight: 300;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+    outline: none;
+    /* margin: 0; */
+}
+
+
+/* dropdown box focus styling */
+
+.container .form .SelBox span {
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight: 100;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* getting the input value  */
+.container .form .SelBox select:valid~span,
+.container .form .SelBox select:focus~span {
+    color: #00dfc4;
+    border: 1px solid #00dfc4;
+    background: #021931;
+    transform: translateX(25px) translateY(-7px);
+    font-size: 0.6em;
+    padding: 0.8px 8px 0.8px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+}
+
+.container .form .SelBox select:valid,
+.container .form .SelBox select:focus {
+    border: 1px solid #00dfc4;
+}
+
+.container .form .SelBox i {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    padding: 2px 0;
+    padding-right: 8px;
+    color: #00dfc4;
+    border-right: 1px solid #00dfc4;
+}
+
+
+/* stylig the submit button */
+.container .form .inputBox input[type="submit"] {
+    background: #00dfc4;
+    color: #021931;
+    padding: 10px 0;
+    font-weight: 500;
+    cursor: pointer;
+    border-right: 1px solid #00dfc4;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+        inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+
+/* for the file upload */
+/* ........................METHOD 1........................ */
+.container .thumbnail {
+    border-radius: 50px;
+    box-shadow: -5px -5px 15px black;
+    width: 350px;
+    outline: none;
+    color: white;
+}
+
+::-webkit-file-upload-button {
+    color: white;
+    background: #206a5d;
+    padding: 8px;
+    border: none;
+    border-radius: 50px;
+
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+        inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+
+    outline: none;
+}
+
+::-webkit-file-upload-button:hover {
+    background: #438a5e;
+    transition: 2ms linear;
+}
+
+.container .pic input[type="file"] {
+    cursor: pointer;
+}
+
+/* ........................METHOD 2........................ */
+.upload {
+    width: 100px;
+    position: relative;
+}
+
+.upload img {
+    border-radius: 50%;
+    border: 2px solid #eaeaea;
+}
+
+.upload .round {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #00B4FF;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.upload .round input[type="file"] {
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+/* END OF FILE UPLOAD */
+
+.container .form p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+.container .form p a {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* error message  */
+.alert_mesaage {
+    padding: 0.2rem 1.2rem;
+    /* margin-bottom: 1rem; */
+    border-radius: 2rem;
+    font-weight: bold;
+    /* width: 100%; */
+    text-align: center;
+}
+
+.alert_mesaage.error {
+    background: hsl(346, 87%, 46%, 15%);
+    color: #da0f3f;
+    margin-bottom: 12px;
+}
+
+.alert_mesaage.success {
+    background: hsl(156, 100%, 38%, 15%);
+    color: #00c476;
+    margin-bottom: 12px;
+}
+
+/* .............................FOR THE SERVICE ENTRY......................................... */
+table input {
+    padding: 12px 8px 8px 12px;
+    width: 100%;
+    margin: 1px;
+    border: none;
+    background: #021931;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-weight: 300;
+    border-start-start-radius: 20px;
+    font-size: 0.9em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+    outline: none;
+}
+
+.container .containerBox table input:valid,
+.container .containerBox table input:focus {
+    border: 1px solid #00dfc4;
+    background: #021931;
+}
+
+/* styling the dropdown box */
+.containerBox #service {
+    padding: 0.6rem;
+    width: 100%;
+    background-color: #021931;
+
+    border-radius: 12.5px;
+    font-size: 0.8em;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 0.2rem;
+}
+
+.containerBox {
+    padding: 20px 25px 25px 20px;
+    border-radius: 20px;
+    border: 8px solid #021931;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+        inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+
+}
+
+.container .containerBox table {
+    width: 100%;
+    border: 2rem;
+    text-align: center;
+}
+
+.container .containerBox table th {
+    background: #021931;
+    padding: 0.2rem;
+    color: #f2f2fe;
+    letter-spacing: 3px;
+    border-radius: 20px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.container .containerBox table td {
+    padding: 0 0.1rem;
+}
+
+.container .containerBox table .hd {
+    width: 80px;
+    padding: 0.2rem;
+    text-align: left;
+    background: red;
+    color: white;
+    font-weight: bold;
+}
+
+.container .containerBox table tr:hover td {
+    background: #09095a;
+    border-start-start-radius: 20px;
+    color: #f2f2fe;
+    cursor: default;
+    transition: all 300ms ease;
+}
+
+/* Media queries (Medium devicdes-Tablets) */
+
+@media screen and (max-width:1024px) {
+
+    .container {
+        /* width: 25em; */
+        padding: 20px 25px;
+    }
+
+    .container .form h2 {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        /* hyphens: auto; */
+
+    }
+
+
+    .container .containerBox table th {
+        letter-spacing: 0;
+    }
+
+    .container .containerBox table .hd {
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .container .form {
+             margin-top: 5rem;
+              /* width: 35em;  */
+    
+         }
+
+    
+
+    .container .form .areaBox textarea {
+        height: 10em;
+    }
+
+    .container .form .areaBox input {
+        height: 3em;
+    }
+
+    .container  .form.signin, .form.signup {
+        margin-top: 1rem;
+        width: 40vw;
+        /* margin: 0 auto; */
+    }
+}
+
+/* Media queries (medium devicdes-mobiles) */
+
+@media screen and (max-width:992) {
+    .container {
+        width: 15em;
+        padding: 25px;
+    }
+
+    .container .form h2 {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .container .containerBox table th {
+        letter-spacing: 0;
+        font-size: 10px;
+        padding: 0.1rem;
+    }
+
+    .container .containerBox table .hd {
+        width: 60px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+
+     /* .container .form {
+             margin-top: 5rem;
+              width: 45em; 
+         } */
+
+    /* .container .form .areaBox textarea {
+        height: 15em;
+    }
+
+    .container .form .areaBox input {
+        height: 4em;
+    } */
+}
+
+/* Media queries (small devicdes-mobiles) */
+
+@media screen and (max-width:820px) {
+
+    .container {
+        /* width: 15em; */
+        padding: 2px;
+    }
+
+    .container .form h2 {
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .container .containerBox table th {
+        letter-spacing: 0;
+        font-size: 10px;
+        padding: 0.1rem;
+    }
+
+    .container .containerBox table .hd {
+        width: 40px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+
+     /* .container .form {
+        margin-top: 2rem;
+        width: 40em; 
+
+    } */
+
+    /* ..................................................... */
+    /* .container .form .areaBox textarea {
+        height: 30em;
+    }
+
+    .container .form .areaBox input {
+        height: 5em;
+    } */
+
+    /* .container .form .areaBox textarea {
+        height: 10em;
+    }
+
+    .container .form .areaBox input {
+        height: 3em;
+    } */
+
+    .container  .form.signin, .form.signup {
+        /* margin-top: 1rem; */
+        width: 50vw;
+        /* height: 20rem; */
+        margin:  auto;
+    }
+
+}
+
+
+
+/* Media queries (small devicdes-mobiles) */
+
+@media screen and (max-width:600px) {
+
+    .container {
+        width: 15em;
+        padding: 2px;
+    }
+
+    .container .form h2 {
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .container .containerBox table th {
+        letter-spacing: 0;
+        font-size: 10px;
+        padding: 0.1rem;
+    }
+
+    .container .containerBox table .hd {
+        width: 40px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    /* .container .form {
+        margin-top: 2rem;
+        width: 40em;
+
+    }
+
+    .container .form .areaBox textarea {
+        height: 30em;
+    }
+
+    .container .form .areaBox input {
+        height: 5em;
+    } */
+
+    .container  .form.signin, .form.signup {
+        width: 100vw;
+        /* margin: 0 auto; */
+    }
+
+}
+
+/* Media queries (small devicdes-mobiles) */
+
+@media screen and (max-width:360px) {
+    .container {
+        width: 15em;
+        padding: 5px;
+    }
+
+    .container .form h2 {
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .container .containerBox table th {
+        letter-spacing: 0;
+        font-size: 10px;
+        padding: 0.1rem;
+    }
+
+    .container .containerBox table .hd {
+        width: 35px;
+        font-size: 8px;
+        font-weight: bold;
+    }
+
+
+   
+}
+
+/* Media queries (small devicdes-mobiles) */
+@media screen and (max-width:280px) {
+    .container {
+        width: 15em;
+        padding: 2px;
+    }
+
+    .container .form h2 {
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .container .containerBox table th {
+        letter-spacing: 0;
+        font-size: 10px;
+        padding: 0.1rem;
+    }
+
+    .container .containerBox table .hd {
+        width: 35px;
+        font-size: 8px;
+        font-weight: bold;
+    }
+
+    .container .containerBox {
+        width: 100%;
+    }
+
+    .container .form {
+        margin-top: 6rem;
+        /* width: 20em; */
+
+    }
+
+    .container .form .areaBox textarea {
+        height: 20em;
+    }
+
+    .container .form .areaBox input {
+        height: 3em;
+    } 
+  
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login and Registration</title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/styles.css">
+
+    <style>
+        body {
+            background-image: url(./images/bg-texture.png);
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <body>
+
+        <nav>
+            <div class="container nav_container">
+                <a href="index.html" class="nav_logo">DLBC</a>
+
+                <ul class="nav_items">
+
+                    <!-- <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li> -->
+
+                    <!-- <li><a href="sign.html">Signin</a></li> -->
+
+                    <li class="nav_profile">
+                        <div class="avatar">
+                            <img src="images/avatar1.jpg" alt="">
+                        </div>
+                        <ul>
+                            <li><a href="admin/dashboard.html">Dashboard</a></li>
+                            <li><a href="logout.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <button id="open_nav-btn"><i class="uil uil-bars"></i></button>
+                <button id="close_nav-btn"><i class="uil uil-multiply"></i></button>
+            </div>
+        </nav>
+        <!-- end of nav  -->
+
+        <div class="container">
+
+            <div class="form reg">
+
+
+                <h2>Members Registration</h2>
+
+                <div class="alert_mesaage success">
+                    <p>This is an success message</p>
+                </div>
+
+                <form action="">
+
+                    <div class="upload">
+                        <img id="imagePreview" src="./images/propic.png" width="100" height="100" alt="Profile">
+
+                        
+                        <div class="round">
+                            <input type="file" onchange="document.getElementById('imagePreview').src = window.URL.createObjectURL(this.files[0])">
+                            <i class="uil uil-upload" style="color: #fff;"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="inputBox">
+                        <input type="text" name="" id="" required>
+                        <i class="fa-regular fa-user"></i>
+                        <span>Fullname</span>
+                    </div>
+
+
+                    <div class="SelBox">
+                        <select name="pos" id="position" required>
+                            <option value=""></option>
+                            <option value="Pastor">Pastor</option>
+                            <option value="Member">Member</option>
+                        </select>
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Position</span>
+                    </div>
+
+                    <div class="SelBox">
+                        <!-- <div class="lbl">position</div> -->
+                        <!-- <label for="district" class="lb">district</label> -->
+                        <select name="district" id="district" required>
+                            <option value=""></option>
+                            <option value="1">KADE</option>
+                            <option value="2">AKWATIA</option>
+                            <option value="3">BOADUA</option>
+                        </select>
+
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>District</span>
+                    </div>
+
+                    <div class="SelBox">
+                        <!-- <div class="lbl">position</div> -->
+                        <!-- <label for="location" class="lbs">location</label> -->
+                        <select name="location" id="location" required>
+                            <option value=""></option>
+                            <option value="1">ASUOM</option>
+                            <option value="2">ABAAM</option>
+                            <option value="3">KUSI</option>
+                        </select>
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Location</span>
+                    </div>
+                    <!-- <div class="inputBox">
+                <input type="date" name="">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Date Joined</span>
+            </div> -->
+
+                    <div class="inputBox">
+                        <input type="text" name="" onfocus="(this.type='date')"
+                            onblur="if(!this.value) this.type='text'" required>
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Date Joined</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="email" name="" id="" required>
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Email Address</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="text" name="" id="" required>
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Home Address</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="text" name="" id="" required>
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Contact</span>
+                    </div>
+
+                    <!-- <div class="pic">
+                <input type="file" class="thumbnail">
+            </div> -->
+
+
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Save">
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+
+        <script src="./style/main.js"></script>
+
+    </body>
+
+</html>

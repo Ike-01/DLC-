@@ -1,0 +1,1462 @@
+* {
+    /* margin: 0;
+    padding: 0;
+    border:0;
+    outline:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; */
+
+    margin: 0;
+    padding: 0;
+    outline: o;
+    border: 0;
+    appearance: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #6c63ff;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    --color-bg: #1f2641;
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
+    --color-bg: #0f0f3e;
+
+    --color-gray-900: #1e1e66;
+    --color-gray-700: #2d2b7c;
+    --color-gray-300: rgba(242, 242, 254, 0.3);
+    --color-gray-200: rgba(242, 242, 254, 0.7);
+    --color-bg: #0f0f3e;
+    --color-gray-200: rgba(242, 242, 254, 0.7);
+    --color-red: #da0f3f;
+
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+
+body {
+    /* font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    color: var(--color-white);
+    background: var(--color-bg); */
+
+
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--color-gray-200);
+    /* overflow-x: hidden; */
+    background: var(--color-bg);
+    font-size: 0.9rem;
+}
+
+.container {
+    /* Note that 1rem = 16px */
+    /* width: var(--container-width-lg);*/
+    /* margin: 0 auto;  */
+
+    width: var(--container-width-lg);
+    /* max-width: 1800px; */
+    margin: 0 auto;
+    /* margin-inline: auto; */
+
+}
+
+section {
+    /* padding: 2rem 0; */
+    margin-top: 2rem;
+    /* 
+    width: 100vw; 
+    height: 100vh;*/
+
+    /* padding: 6rem 0; */
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+a {
+    color: var(--color-white);
+    transition: var(--transition);
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ************************BUTTON***************************** */
+
+.btn {
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.btn-primary {
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+
+
+
+/* ************************NAVBAR***************************** */
+nav {
+    background: var(--color-primary);
+    width: 100vw;
+    /* width: 100%; */
+    height: 4.5rem;
+    position: fixed;
+    top: 0;
+    /* to sit on top */
+    z-index: 10;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* change the navbar on scroll from the javascript */
+.window-scroll {
+    background: var(--color-primary);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+nav button {
+    display: none;
+}
+
+/* #open_nav-btn {
+    display: none;
+}
+
+#close_nav-btn {
+    display: none;
+} */
+
+
+.nav_container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.3rem solid var(--color-bg);
+}
+
+.nav_logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.nav_items {
+    /* horizontal display */
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav_profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav_profile ul {
+    position: absolute;
+    top: 140%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.4);
+    /* Hide the profile logout and dashboard */
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+/* Show the profile logout and dashboard when hovered*/
+.nav_profile:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    transition: var(--transition);
+}
+
+.nav_profile ul li a {
+    padding: 1rem;
+    background: var(--color-gray-900);
+    display: block;
+    width: 100%;
+}
+
+.nav_profile ul li:last-child a {
+    background: var(--color-red);
+    color: var(--color-bg);
+}
+
+
+
+
+/* ************************HEADER***************************** */
+
+header {
+    position: relative;
+    /* top: 5rem; */
+    overflow: hidden;
+    height: 100vh;
+    /* height: 70vh; */
+    /* margin-top: 5rem; */
+}
+
+.header_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+    /* height: 100vh; */
+}
+
+.header_left p {
+    margin: 1rem 0 2.4rem;
+    /* margin-bottom: 0.1rem; */
+}
+
+
+
+
+/* ############ styling the dashboard ############## */
+.dashboard {
+    margin-top: 6rem;
+    /* background: red; */
+}
+
+.sidebar_toggle {
+    display: none;
+}
+
+/* Table container */
+.dashboard_container {
+    display: grid;
+    grid-template-columns: 14rem auto;
+    gap: 1rem;
+    background: var(--color-gray-900);
+    padding: 1rem;
+    /* margin-bottom: 5rem; */
+
+    width: 100vw;
+
+}
+
+.dashboard aside {
+    box-shadow: 2rem 0 4rem rgba(0, 0, 0, 0.4);
+    border-left: 2%;
+    transition: var(--transition);
+    background: var(--color-primary);
+    margin-top: 2rem;
+    /* z-index: 11; */
+}
+
+.dashboard aside a {
+    background-color: var(--color-primary);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.6rem;
+}
+
+/* giving all the li border buttom line expect the last one */
+/* .dashboard aside ul li:not(:last-child) a {
+    border-bottom: 1px solid var(--color-gray-900);
+} */
+
+.dashboard aside ul li a {
+    border-bottom: 1px solid var(--color-gray-900);
+}
+
+.dashboard aside a:hover {
+    background: var(--color-gray-700);
+}
+
+.dashboard aside a.active {
+    background: var(--color-gray-900);
+}
+
+/* for the table */
+/* .dashboard main {
+    margin-left: 1.5rem;
+}
+
+.dashboard main h2 {
+    margin: 0 0 2rem 0;
+    line-height: 1;
+}
+
+.dashboard main table {
+    width: 100%;
+    text-align: left;
+}
+
+.dashboard main table th {
+    background: var(--color-gray-700);
+    padding: 0.8rem;
+    color: var(--color-white);
+}
+
+.dashboard main table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.dashboard main table tr:hover td {
+   background: var(--color-bg);
+   color: var(--color-white);
+   cursor: default;
+   transition: var(--transition);
+} */
+
+
+
+/* ################################## NEW TABLE STYLE   ##################################### */
+
+/* ...................................... BEGIN ............................................................ */
+/* #################### STYLING THE TABLE CONTAINER  ####################### */
+
+.tabel-container {
+    margin: 0 1.5rem;
+}
+
+.heading {
+    font-size: 20px;
+    text-align: center;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+
+/* #################### STYLING THE TABLE AND THE COLLAPSE  ####################### */
+.tablestyle {
+    width: 100%;
+    /* width: 100vw; */
+    border-collapse: collapse;
+    /* height: 100vh; */
+}
+
+
+/* #################### STYLING THE TABLE HEADER ####################### */
+.tablestyle thead {
+    background-color: var(--color-gray-700);
+}
+
+
+.tablestyle thead tr th {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+    border: 1px solid var(--color-gray-200);
+}
+
+/* #################### STYLING THE TABLE DATA (ROWS) ####################### */
+.tablestyle tbody tr td {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.35px;
+    color: #f1f1f1;
+    background-color: var(--color-gray-700)44;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid var(--color-gray-200);
+}
+
+.tablestyle tbody tr:hover td {
+    background: var(--color-bg);
+    color: var(--color-white);
+    cursor: default;
+    transition: var(--transition);
+}
+
+
+/* #################### STYLING THE OPEN CLASS ####################### */
+.tablestyle .text_open {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.35px;
+    color: #FF1046;
+}
+
+/* #################### STYLING THE BUTTON ####################### */
+/* .tablestyle tbody tr td .btn{
+      width: 60px;
+      text-decoration: none;
+      line-height: 25px;
+      display: inline-block;
+      border-radius: 10%;
+      background-color: #FF1046;
+      font-weight: medium;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 2px;
+      vertical-align: middle;
+      user-select: none;
+      border: 1px solid #dee2e685;
+      font-size: 14px;
+      opacity: 1;
+    } */
+
+.tablestyle tbody tr td a {
+    margin-right: 2px;
+}
+
+/* .....................................  END  ............................................................. */
+
+.tablestyle tbody tr:nth-child(even) {
+    background: var(--color-gray-700);
+}
+
+
+
+
+/* ################################## END NEW TABLE STYLE   ##################################### */
+
+
+/* button style */
+.tablestyle tbody tr td .btn {
+    display: inline-block;
+    /* width: fit-content; */
+    width: 56px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    user-select: none;
+    text-align: center;
+    background-color: var(--color-primary);
+    border-radius: 10%;
+    ;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-white);
+}
+
+.tablestyle tbody tr td .btn:hover {
+    color: var(--color-white);
+    border: 1px solid #7603f885;
+}
+
+.tablestyle tbody tr td .btn.sm {
+    padding: 0.1rem 0.4rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    /* float: right;
+    margin-right: 0.5rem; */
+}
+
+.tablestyle tbody tr td .btn.danger {
+    background: var(--color-danger);
+}
+
+.tablestyle tbody tr td .btn.warning {
+    background: var(--color-warning);
+}
+
+.tablestyle tbody tr td .btn.success {
+    background: var(--color-success);
+}
+
+
+/* .dashboard aside h5 {
+    display: none;
+} */
+
+
+/* ########################## footer ############################# */
+footer {
+    background: var(--color-primary);
+}
+
+.footer_copyright {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 2px solid var(--color-bg);
+    margin-top: 2.5rem;
+}
+
+
+/* /////////////////////////// OUR pastor //////////////////////////////////////////////// */
+
+.about_achieves {
+    display: grid;
+    place-content: center;
+
+    /* background-image: "./images/about achievements.svg"; */
+}
+
+.about_achieves-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    gap: 2rem;
+}
+
+.about_achieves-left>h1 {
+    margin: 1.6rem 0 2.5rem;
+    text-align: center;
+}
+
+
+.team_mem {
+    width: 400px;
+    height: 500px;
+    background: var(--color-bg2);
+    padding: 1rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.team_mem:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+
+
+/* ***********************TEAM****************************** */
+.team {
+    background: var(--color-bg1);
+    box-shadow: insert 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.team h2 {
+    margin-top: 5rem;
+}
+
+.team_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team_member {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.team_member:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team_memmber-image {
+    filter: saturate(0);
+}
+
+.team_memmber-image:hover {
+    filter: saturate(1);
+}
+
+.team_member-info * {
+    text-align: center;
+    margin-top: 0.3rem;
+}
+
+.team_member-info p {
+    color: var(--color-light);
+}
+
+.team_member-socials {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.team_member:hover .team_member-socials {
+    right: 0;
+}
+
+.team_mem:hover .team_member-socials {
+    right: 0;
+}
+
+
+.team_member-socials a {
+    padding: 0.4rem;
+}
+
+/* .......................... END OF TEAM ........................ */
+
+
+
+/* ************************MEDIA QUERY (TABLETS) ***************************** */
+
+@media screen and (max-width:1024) {
+    .container {
+        width: var(--container-width-md);
+        /* margin-inline: 0; */
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .tabel-container {
+        /* padding: 0 10%;
+        margin: 40px auto 0; */
+
+        margin: 0 1.5rem;
+        height: 100vh;
+    }
+
+    .tablestyle tbody tr:nth-child(even):hover {
+        background: var(--color-gray-700);
+        transform: scale(1.06);
+        transition: transform 300ms ease-in;
+    }
+
+    .tablestyle tbody tr:nth-child(odd):hover {
+        background: var(--color-gray-300);
+        transform: scale(1.05);
+        transition: transform 400ms ease-out;
+    }
+
+    /* ############ HEADER ############## */
+    header {
+        height: 72vh;
+        margin-bottom: 4rem;
+    }
+
+
+
+    .header_container {
+        gap: 0;
+        padding-bottom: 3rem;
+    }
+
+
+
+    /* ############## TEAM ############* */
+    .team_container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .team_member {
+        padding: 1rem;
+    }
+
+
+
+    /* ############ NAVBAR ############## */
+
+    nav button {
+        display: inline-block;
+        font-size: 1.5rem;
+        background: transparent;
+        color: var(--color-white);
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    nav button#close_nav-btn {
+        display: none;
+    }
+
+    /* this gives it margi right */
+    /* .nav_container {
+    position: relative;
+} */
+
+    /* for the nav items */
+    .nav_items {
+        position: absolute;
+        display: fixed;
+        flex-direction: column;
+        /* top: 100%; */
+        top: 5rem;
+        right: 0;
+        width: 12rem;
+        height: fit-content;
+        /* align-items: flex-start; */
+        justify-content: center;
+        gap: 0;
+        display: none;
+    }
+
+    .nav_items li {
+        width: 100%;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        box-shadow: -2rem 3rem 7rem rgba(0, 0, 0, 0.7);
+        border-top: 1px solid var(--color-bg);
+
+        /* animating the nav items from the top to bottom */
+        animation: animateDropdown 400ms 0s ease forwards;
+        opacity: 0;
+        transform-origin: top;
+    }
+
+
+    .nav_items li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    .nav_items li:nth-child(3) {
+        animation-delay: 400ms;
+    }
+
+    .nav_items li:nth-child(4) {
+        animation-delay: 600ms;
+    }
+
+    .nav_items li:nth-child(5) {
+        animation-delay: 800ms;
+    }
+
+    @keyframes animateDropdown {
+        0% {
+            transform: rotateX(90deg);
+        }
+
+        100% {
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+    }
+
+    .nav_items li a {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--color-gray-900);
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav_profile {
+        background: var(--color-gray-900);
+    }
+
+    .nav_profile ul {
+        top: 100%;
+        width: 100%;
+    }
+
+    .nav_profile .avatar {
+        margin-left: 2rem;
+        border: 0;
+    }
+
+    /* end of nav styling */
+
+
+    /* ############ dashboard ############## */
+    /* for the dashboard */
+    .dashboard_container {
+        grid-template-columns: 4.3rem auto;
+        padding: 0;
+        background: transparent;
+        height: 100vh;
+    }
+
+    .dashboard aside h5 {
+        display: none;
+    }
+
+    .dashboard aside {
+        z-index: 11;
+    }
+
+    /* .dashboard main h2 {
+       font-size: 1.2rem;
+    }
+
+    .dashboard main table thead {
+        display: none;
+     }
+
+     .dashboard main table tr {
+        display: flex;
+        flex-direction: column;
+     } */
+
+    /* .tablestyle tbody tr:nth-child(even) {
+        background: var(--color-gray-900);
+     } */
+
+    /* .tablestyle tbody tr:hover td {
+        background: transparent;
+     } */
+
+    /* section  {
+        height: 100vh;
+     } */
+
+}
+
+
+/* 
+@media screen and (max-width:1280){
+    .container {
+        width: var(--container-width-md);
+    }
+
+   
+    section {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .tabel-container{
+        margin: 0 1.5rem;
+     }
+
+
+}
+
+@media screen and (max-width:820){
+    .container {
+        width: var(--container-width-md);
+    }
+
+   
+    section {
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+} */
+
+/* ************************MEDIA QUERY (PHONES) ***************************** */
+
+@media screen and (max-width:600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+
+    /* section {
+        /* width: 100vw; */
+        /* height: 100vh; 
+    } */
+
+
+    /* ############ NAVBAR ############## */
+
+    nav button {
+        display: inline-block;
+        font-size: 1.5rem;
+        background: transparent;
+        color: var(--color-white);
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    nav button#close_nav-btn {
+        display: none;
+    }
+
+    /* this gives it margi right */
+    /* 
+    .nav_container {
+        position: relative;
+    } */
+
+    /* for the nav items */
+    .nav_items {
+        position: absolute;
+        display: fixed;
+        flex-direction: column;
+        /* top: 100%; */
+        top: 5rem;
+        right: 0;
+        width: 12rem;
+        height: fit-content;
+        /* align-items: flex-start; */
+        justify-content: center;
+        gap: 0;
+        display: none;
+    }
+
+    .nav_items li {
+        width: 100%;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        box-shadow: -2rem 3rem 7rem rgba(0, 0, 0, 0.7);
+        border-top: 1px solid var(--color-bg);
+
+        /* animating the nav items from the top to bottom */
+        animation: animateDropdown 400ms 0s ease forwards;
+        opacity: 0;
+        transform-origin: top;
+    }
+
+
+    .nav_items li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    .nav_items li:nth-child(3) {
+        animation-delay: 400ms;
+    }
+
+    .nav_items li:nth-child(4) {
+        animation-delay: 600ms;
+    }
+
+    .nav_items li:nth-child(5) {
+        animation-delay: 800ms;
+    }
+
+    @keyframes animateDropdown {
+        0% {
+            transform: rotateX(90deg);
+        }
+
+        100% {
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+    }
+
+    .nav_items li a {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--color-gray-900);
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav_profile {
+        background: var(--color-gray-900);
+    }
+
+    .nav_profile ul {
+        top: 100%;
+        width: 100%;
+    }
+
+    .nav_profile .avatar {
+        margin-left: 2rem;
+        border: 0;
+    }
+
+    /* end of nav styling */
+
+    /* ############ HEADER ############## */
+    header {
+        height: 100vh;
+    }
+
+    .header_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .header_left p {
+        margin-bottom: 1.3rem;
+    }
+
+
+
+    /* ############## TEAM ############* */
+    .team_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+    }
+
+    .team_member {
+        padding: 0;
+    }
+
+    .team_member p {
+        margin-bottom: 1.6rem;
+    }
+
+
+    /********************for the dashboard */
+    .dashboard {
+        margin-top: 5rem;
+    }
+
+    .dashboard_container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* .dashboard main {
+        height: 100vh;
+        margin: 0;
+    }
+
+    .dashboard main h2 {
+        margin-top: 1rem;
+    }
+     */
+    .dashboard aside {
+        position: absolute;
+        box-shadow: 2rem 0 4rem rgba(0, 0, 0, 0.4);
+        left: -100%;
+        /* height: 100vh; */
+        border-left: 2%;
+        transition: var(--transition);
+        /* background: var(--color-primary); */
+        background: red;
+
+        z-index: 11;
+    }
+
+
+    .dashboard .sidebar_toggle {
+        display: inline-block;
+        background: var(--color-primary);
+        color: var(--color-white);
+        position: fixed;
+        right: 0;
+        /* bottom: 4rem; */
+        z-index: 1;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50% 0 0 50%;
+        font-size: 1.3rem;
+        cursor: pointer;
+        box-shadow: -1rem 0 2rem rgba(0, 0, 0, 0.4);
+    }
+
+    /* shows the names on the sidebar */
+    .dashboard aside a h5 {
+        display: inline-block;
+    }
+
+    #hide_sidebar-btn {
+        display: none;
+    }
+
+
+    /* #################### STYLING THE TABLE HEADER ####################### */
+
+
+    .tabel-container {
+        /* padding: 0 10%;
+        margin: 40px auto 0; */
+
+        margin: 0;
+        /* height: 100vh; */
+
+
+    }
+
+
+    .tablestyle thead {
+        display: none;
+    }
+
+    /* #################### STYLING THE TABLE, TABLE BODY,TABLE ROW, TABLE ROW DATA  ####################### */
+    .tablestyle,
+    .tablestyle tbody,
+    .tablestyle tr,
+    .tablestyle td {
+        display: block;
+        /*FOR VERTICAL ARRANGEMENT*/
+        width: 100%;
+    }
+
+    /* #################### STYLING THE TABLE ROW  ####################### */
+    .tablestyle tr {
+        margin-bottom: 15px;
+        /*Putting space between each row data*/
+    }
+
+    /* #################### STYLING THE TABLE ROW DATA ####################### */
+    .tablestyle tbody tr td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .tablestyle tbody tr td img {
+        margin-left: 75%;
+        position: relative;
+    }
+
+    .tablestyle tbody tr td a {
+        margin-top: 5px;
+    }
+
+
+    /* #################### STYLING row data with respect to the column hesdings using data-label  ####################### */
+    .tablestyle td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+    }
+
+}
+
+
+
+@media screen and (max-width:820px) {
+    /* .container {
+        width: var(--container-width-sm);
+    } */
+
+
+    section {
+        width: 100vw;
+        /* height: 100vh; */
+    }
+
+
+    /* ############ NAVBAR ############## */
+
+    nav button {
+        display: inline-block;
+        font-size: 1.5rem;
+        background: transparent;
+        color: var(--color-white);
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    nav button#close_nav-btn {
+        display: none;
+    }
+
+    /* this gives it margi right */
+    /* 
+    .nav_container {
+        position: relative;
+    } */
+
+    /* for the nav items */
+    .nav_items {
+        position: absolute;
+        display: fixed;
+        flex-direction: column;
+        /* top: 100%; */
+        top: 5rem;
+        right: 0;
+        width: 12rem;
+        height: fit-content;
+        /* align-items: flex-start; */
+        justify-content: center;
+        gap: 0;
+        display: none;
+    }
+
+    .nav_items li {
+        width: 100%;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        box-shadow: -2rem 3rem 7rem rgba(0, 0, 0, 0.7);
+        border-top: 1px solid var(--color-bg);
+
+        /* animating the nav items from the top to bottom */
+        animation: animateDropdown 400ms 0s ease forwards;
+        opacity: 0;
+        transform-origin: top;
+    }
+
+
+    .nav_items li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    .nav_items li:nth-child(3) {
+        animation-delay: 400ms;
+    }
+
+    .nav_items li:nth-child(4) {
+        animation-delay: 600ms;
+    }
+
+    .nav_items li:nth-child(5) {
+        animation-delay: 800ms;
+    }
+
+    @keyframes animateDropdown {
+        0% {
+            transform: rotateX(90deg);
+        }
+
+        100% {
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+    }
+
+    .nav_items li a {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--color-gray-900);
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav_profile {
+        background: var(--color-gray-900);
+    }
+
+    .nav_profile ul {
+        top: 100%;
+        width: 100%;
+    }
+
+    .nav_profile .avatar {
+        margin-left: 2rem;
+        border: 0;
+    }
+
+    /* end of nav styling */
+
+    /* ############ HEADER ############## */
+    header {
+        height: 100vh;
+    }
+
+    .header_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .header_left p {
+        margin-bottom: 1.3rem;
+    }
+
+
+
+    /* ############## TEAM ############* */
+    .team_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+    }
+
+    .team_member {
+        padding: 0;
+    }
+
+    .team_member p {
+        margin-bottom: 1.6rem;
+    }
+
+
+    /********************for the dashboard */
+    .dashboard {
+        margin-top: 5rem;
+    }
+
+    .dashboard_container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* .dashboard main {
+        height: 100vh;
+        margin: 0;
+    }
+
+    .dashboard main h2 {
+        margin-top: 1rem;
+    }
+     */
+    .dashboard aside {
+        position: absolute;
+        box-shadow: 2rem 0 4rem rgba(0, 0, 0, 0.4);
+        left: -100%;
+        /* height: 100vh; */
+        border-left: 2%;
+        transition: var(--transition);
+        /* background: var(--color-primary); */
+        background: red;
+
+        z-index: 11;
+    }
+
+
+    .dashboard .sidebar_toggle {
+        display: inline-block;
+        background: var(--color-primary);
+        color: var(--color-white);
+        position: fixed;
+        right: 0;
+        /* bottom: 4rem; */
+        z-index: 1;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50% 0 0 50%;
+        font-size: 1.3rem;
+        cursor: pointer;
+        box-shadow: -1rem 0 2rem rgba(0, 0, 0, 0.4);
+    }
+
+    /* shows the names on the sidebar */
+    .dashboard aside a h5 {
+        display: inline-block;
+    }
+
+    #hide_sidebar-btn {
+        display: none;
+    }
+
+
+    /* #################### STYLING THE TABLE HEADER ####################### */
+
+
+    .tabel-container {
+        /* padding: 0 10%;
+        margin: 40px auto 0; */
+
+        margin: 0;
+        /* height: 100vh; */
+
+
+    }
+
+
+    .tablestyle thead {
+        display: none;
+    }
+
+    /* #################### STYLING THE TABLE, TABLE BODY,TABLE ROW, TABLE ROW DATA  ####################### */
+    .tablestyle,
+    .tablestyle tbody,
+    .tablestyle tr,
+    .tablestyle td {
+        display: block;
+        /*FOR VERTICAL ARRANGEMENT*/
+        width: 100%;
+    }
+
+    /* #################### STYLING THE TABLE ROW  ####################### */
+    .tablestyle tr {
+        margin-bottom: 15px;
+        /*Putting space between each row data*/
+    }
+
+    /* #################### STYLING THE TABLE ROW DATA ####################### */
+    .tablestyle tbody tr td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .tablestyle tbody tr td img {
+        margin-left: 75%;
+        position: relative;
+    }
+
+    .tablestyle tbody tr td a {
+        margin-top: 5px;
+    }
+
+
+    /* #################### STYLING row data with respect to the column hesdings using data-label  ####################### */
+    .tablestyle td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+    }
+
+}
